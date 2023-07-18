@@ -2,25 +2,25 @@
 
 Hammer & Hearth is a REST API used to make games about blacksmithing, automation, and running a shop. How you choose to make the game is up to you!
 
-## Inventory
+## Items
 
-Returns JSON data about all the items in your inventory
+Returns JSON data about all the items in a database
 <br>
 
 - **URL**
 
-  /api/v1/inventory
+  /api/v1/items
 
 * **Method**
 
   `GET`
 
-Returns JSON data about what item is occupying a single slot
+Returns JSON data about a specific item in a database
 <br>
 
 - **URL**
 
-  /api/v1/inventory/:id
+  /api/v1/items/:id
 
 * **Method**
 
@@ -32,12 +32,12 @@ Returns JSON data about what item is occupying a single slot
 
   `id=[string]`
 
-Add an item to your inventory
+Creates an item in a database
 <br>
 
 - **URL**
 
-  /api/v1/inventory/:id
+  /api/v1/items
 
 * **Method**
 
@@ -49,7 +49,7 @@ Add an item to your inventory
 
   `id=[string]`
 
-Remove an item to your inventory
+Remove an existing item from a database
 <br>
 
 - **URL**
@@ -59,6 +59,23 @@ Remove an item to your inventory
 * **Method**
 
   `DELETE`
+
+* **URL Params**
+
+  **Required:**
+
+  `id=[string]`
+
+Updates an existing item in a database
+<br>
+
+- **URL**
+
+  /api/v1/inventory/:id
+
+* **Method**
+
+  `PATCH`
 
 * **URL Params**
 
